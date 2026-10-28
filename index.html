@@ -1,0 +1,207 @@
+
+<link rel="stylesheet" href="./style.css">
+
+<div class="universe" id="universe">
+  <canvas id="stars"></canvas>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+
+  <div class="top-label">UN PEQUEÑO UNIVERSO PARA TI ✦</div>
+
+  <main class="scene">
+    <section class="intro" id="intro">
+      <div class="orbit-icon">✦</div>
+      <p class="eyebrow">PARA ALGUIEN MUY ESPECIAL</p>
+      <h1>Hola, <span>Erica</span> 💜</h1>
+      <p class="intro-text">
+        Hoy el universo tiene algo preparado para ti...
+      </p>
+
+      <button class="glow-button" id="startBtn" onclick="
+        document.querySelector('#intro').classList.add('hidden');
+        document.querySelector('#birthday').classList.remove('hidden');
+      ">
+        Abrir mi regalo ✨
+      </button>
+
+      <p class="tiny-note">Hecho con amor, solo para ti</p>
+    </section>
+
+    <section class="birthday hidden" id="birthday">
+      <p class="eyebrow">HOY BRILLA UNA ESTRELLA MÁS</p>
+      <h1 class="birthday-title">
+        Feliz cumpleaños,<br />
+        <span>Cariño</span>
+      </h1>
+
+      <div class="galaxy">
+        <div class="orbit orbit-a"></div>
+        <div class="orbit orbit-b"></div>
+        <div class="orbit orbit-c"></div>
+
+        <div class="planet planet-one"></div>
+        <div class="planet planet-two"></div>
+        <div class="cake-glow"></div>
+
+        <div class="cake">
+          <div class="candle">
+            <div class="flame"></div>
+          </div>
+          <div class="cake-top">
+            <span class="icing"></span>
+          </div>
+          <div class="cake-middle"></div>
+          <div class="cake-bottom"></div>
+          <div class="cake-plate"></div>
+        </div>
+
+        <div class="floating-heart heart-one">♥</div>
+        <div class="floating-heart heart-two">♡</div>
+        <div class="floating-star star-one">✦</div>
+        <div class="floating-star star-two">✧</div>
+        <div class="floating-star star-three">✦</div>
+      </div>
+
+      <p class="wish">Pide un deseo, mi amor 🌠</p>
+
+      <div class="button-stack">
+        <button class="glow-button" id="musicBtn" onclick="
+          const music = document.querySelector('#music');
+          music.src = 'https://raw.githubusercontent.com/yalexdamian-ux/regalo-erica/main/WhatsApp-Video-2026-10-27-at-15.53.51.mp3';
+          music.play().catch(() => alert('No se pudo reproducir la canción. Vamos a revisar el enlace 💜'));
+        ">
+          ♪ Escuchar nuestra canción
+        </button>
+
+        <button class="outline-button" id="photosBtn" onclick="
+          document.querySelectorAll('.scene > section').forEach(s => s.classList.add('hidden'));
+          document.querySelector('#memories').classList.remove('hidden');
+        ">
+          ♡ Nuestros recuerdos
+        </button>
+
+        <button class="outline-button" id="letterBtn" onclick="
+          document.querySelectorAll('.scene > section').forEach(s => s.classList.add('hidden'));
+          document.querySelector('#letter').classList.remove('hidden');
+        ">
+          💌 Tengo algo que decirte
+        </button>
+      </div>
+    </section>
+
+    <section class="memories hidden" id="memories">
+      <p class="eyebrow">NUESTRO PEQUEÑO UNIVERSO</p>
+      <h2>Mis recuerdos favoritos <span>♡</span></h2>
+      <p class="section-text">
+        Cada momento contigo tiene su propia estrella.
+      </p>
+
+      <div class="photo-grid">
+        <figure class="photo-card photo-one">
+          <img
+            src="https://i.ibb.co/s9BxM6pT/IMG-20230101-122252-1.jpg"
+            alt="Pareja abrazada"
+          />
+          <figcaption>Contigo, todo es más bonito ✨</figcaption>
+        </figure>
+
+        <figure class="photo-card photo-two">
+          <img
+            src="https://i.ibb.co/twgVkvtY/IMG-20221231-183237.jpg"
+            alt="Pareja compartiendo un momento"
+          />
+          <figcaption>Mi lugar favorito es a tu lado 💜</figcaption>
+        </figure>
+
+        <figure class="photo-card photo-three">
+          <img
+            src="https://i.ibb.co/m5vY2VNT/Whats-App-Image-2026-10-28-at-10-31-14.jpg"
+            alt="Pareja tomada de la mano"
+          />
+          <figcaption>Y que vengan mil aventuras más 🌌</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img
+            src="https://i.ibb.co/5h7b4ZwP/1765673197862.jpg"
+            alt="Uno de nuestros recuerdos especiales"
+            loading="lazy"
+          />
+          <figcaption>Un momento contigo se vuelve eterno 💜</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img
+            src="https://i.ibb.co/XrnWXHdd/Whats-App-Image-2026-10-28-at-13-46-04.jpg"
+            alt="Otro recuerdo juntos"
+            loading="lazy"
+          />
+          <figcaption>Mi felicidad tiene mucho de ti ✨</figcaption>
+        </figure>
+
+        <figure class="photo-card">
+          <img
+            src="https://i.ibb.co/LHfqVQs/IMG-20211206-WA0146.jpg"
+            alt="Un recuerdo de nuestra historia"
+            loading="lazy"
+          />
+          <figcaption>De todos los caminos, elegiría el que me lleva a ti 🌌</figcaption>
+        </figure>
+      </div>
+
+      <button class="glow-button" id="backBtn" onclick="
+        document.querySelector('#memories').classList.add('hidden');
+        document.querySelector('#birthday').classList.remove('hidden');
+      ">
+        Volver a nuestra galaxia ✨
+      </button>
+    </section>
+
+    <section class="letter hidden" id="letter">
+      <div class="letter-stars">✦ ✧ ♡ ✧ ✦</div>
+      <p class="eyebrow">DE MI CORAZÓN AL TUYO</p>
+      <h2>Para ti, <span>Erica</span></h2>
+
+      <div class="letter-card">
+        <p class="big-message">¡Feliz Cumpleaños, mi vida!</p>
+        <p>
+          Gracias por ser parte de mi universo.
+          Te amo más de lo que las estrellas pueden contar.
+        </p>
+        <p class="signature">Con todo mi amor, siempre. 💜</p>
+      </div>
+
+      <div class="final-stars">⋆｡°✩ ✧ ⋆｡°✩</div>
+
+      <button class="glow-button" id="finalBtn" onclick="
+        document.querySelector('#letter').classList.add('hidden');
+        document.querySelector('#finale').classList.remove('hidden');
+      ">
+        Mi último deseo para ti 💖
+      </button>
+    </section>
+
+    <section class="finale hidden" id="finale">
+      <div class="final-heart">♥</div>
+      <p class="eyebrow">ENTRE INFINITAS GALAXIAS...</p>
+      <h2>Yo te volvería a elegir a ti.</h2>
+      <p class="final-message">
+        Feliz cumpleaños, Cariño.<br />
+        Que la vida nos regale muchos universos juntos.
+      </p>
+      <div class="final-stars">✧ ⋆ ✦ ⋆ ✧</div>
+
+      <button class="outline-button" id="replayBtn" onclick="
+        document.querySelectorAll('.scene > section').forEach(s => s.classList.add('hidden'));
+        document.querySelector('#intro').classList.remove('hidden');
+      ">
+        Volver a vivir la sorpresa ↻
+      </button>
+    </section>
+  </main>
+
+  <footer>HECHO CON TODO MI AMOR · PARA TI CARIÑO ♡</footer>
+
+  <audio id="music" preload="none" loop></audio>
+</div>
+
